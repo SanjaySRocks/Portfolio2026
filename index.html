@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanjay Singh | DevOps Engineer</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:#fff;
+      color:#000;
+      overflow-x:hidden;
+    }
+
+    /* HEADER */
+
+    header{
+      background:#ffea00;
+      border-bottom:5px solid #000;
+      padding:18px 20px;
+    }
+
+    h1{
+      font-size:clamp(2.5rem,6vw,5rem);
+      text-transform:uppercase;
+      line-height:0.9;
+      letter-spacing:-2px;
+      text-shadow:4px 4px 0 red;
+    }
+
+    .subtitle{
+      margin-top:8px;
+      display:inline-block;
+      font-weight:bold;
+      background:#000;
+      color:#fff;
+      padding:6px 12px;
+      border:3px solid #fff;
+      box-shadow:4px 4px 0 red;
+      font-size:0.9rem;
+    }
+
+    /* NAV */
+
+    nav{
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#000;
+      background:#fff;
+      border:3px solid #000;
+      padding:8px 14px;
+      font-weight:900;
+      font-size:0.85rem;
+      box-shadow:4px 4px 0 #000;
+      transition:0.15s;
+    }
+
+    nav a:hover{
+      transform:translate(4px,4px);
+      box-shadow:none;
+      background:red;
+      color:#fff;
+    }
+
+    /* MARQUEE */
+
+    .marquee{
+      overflow:hidden;
+      background:#000;
+      color:#ffea00;
+      border-bottom:5px solid #000;
+      padding:10px 0;
+      font-weight:900;
+    }
+
+    .track{
+      white-space:nowrap;
+      font-size:1.3rem;
+      animation:marquee 15s linear infinite;
+    }
+
+    @keyframes marquee{
+      from{
+        transform:translateX(0);
+      }
+      to{
+        transform:translateX(-50%);
+      }
+    }
+
+    /* SECTIONS */
+
+    section{
+      padding:70px 20px;
+      border-bottom:5px solid #000;
+    }
+
+    section:nth-child(even){
+      background:#f4f4f4;
+    }
+
+    section:nth-child(odd){
+      background:#fff;
+    }
+
+    h2{
+      display:inline-block;
+      background:cyan;
+      border:4px solid #000;
+      padding:8px 16px;
+      margin-bottom:35px;
+      text-transform:uppercase;
+      box-shadow:6px 6px 0 #000;
+      font-size:1.6rem;
+    }
+
+    /* GRID */
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    /* CARDS */
+
+    .card{
+      background:#fff;
+      border:4px solid #000;
+      padding:22px;
+      box-shadow:10px 10px 0 #000;
+      transition:0.2s ease;
+      transform:rotate(-1deg);
+    }
+
+    .card:nth-child(even){
+      transform:rotate(1deg);
+    }
+
+    .card:hover{
+      transform:translate(-6px,-6px) rotate(0deg);
+      box-shadow:16px 16px 0 #000;
+      background:#fffb00;
+    }
+
+    .card h3{
+      margin-bottom:12px;
+      text-transform:uppercase;
+      font-size:1.2rem;
+    }
+
+    .card p,
+    .card li{
+      line-height:1.6;
+      font-weight:600;
+      font-size:0.95rem;
+    }
+
+    .card ul{
+      margin-top:10px;
+      padding-left:20px;
+    }
+
+    /* BUTTON */
+
+    button{
+      margin-top:20px;
+      border:4px solid #000;
+      padding:12px 22px;
+      background:red;
+      color:#fff;
+      font-weight:900;
+      cursor:pointer;
+      box-shadow:6px 6px 0 #000;
+      transition:0.15s;
+    }
+
+    button:hover{
+      transform:translate(6px,6px);
+      box-shadow:none;
+    }
+
+    /* STICKER */
+
+    .sticker{
+      display:inline-block;
+      margin-bottom:25px;
+      background:red;
+      color:#fff;
+      border:4px solid #000;
+      padding:8px 12px;
+      font-weight:bold;
+      transform:rotate(-8deg);
+      box-shadow:5px 5px 0 #000;
+      font-size:0.9rem;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#00e5ff;
+      border-top:5px solid #000;
+      text-align:center;
+      padding:25px;
+      font-weight:900;
+      font-size:0.95rem;
+    }
+
+    /* NOISE TEXTURE */
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background-image:
+      radial-gradient(#00000010 1px, transparent 1px);
+      background-size:12px 12px;
+      pointer-events:none;
+      z-index:9999;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:3rem;
+      }
+
+      nav{
+        gap:8px;
+      }
+
+      nav a{
+        font-size:0.75rem;
+        padding:7px 12px;
+      }
+
+      h2{
+        font-size:1.3rem;
+      }
+
+      .track{
+        font-size:1rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <h1>Sanjay Singh</h1>
+
+    <div class="subtitle">
+      DEVOPS ENGINEER • CLOUD • AUTOMATION
+    </div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </header>
+
+  <!-- MARQUEE -->
+
+  <div class="marquee">
+    <div class="track">
+      AWS • DOCKER • KUBERNETES • TERRAFORM • DEVOPS • CI/CD • CLOUD • AUTOMATION • AWS • DOCKER • KUBERNETES • TERRAFORM • DEVOPS • CI/CD • CLOUD • AUTOMATION •
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="sticker">
+      AVAILABLE FOR WORK
+    </div>
+
+    <h2>About</h2>
+
+    <div class="card">
+      <p>
+        I am a DevOps Engineer specializing in scalable cloud infrastructure,
+        CI/CD pipelines, automation, container orchestration, and monitoring systems.
+        I enjoy building reliable production-ready environments.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <h2>Skills</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>AWS / CLOUD</h3>
+        <p>EC2, IAM, VPC, Route53, S3</p>
+      </div>
+
+      <div class="card">
+        <h3>CI/CD</h3>
+        <p>GitHub Actions, Jenkins, GitLab CI</p>
+      </div>
+
+      <div class="card">
+        <h3>CONTAINERS</h3>
+        <p>Docker, Kubernetes, Helm</p>
+      </div>
+
+      <div class="card">
+        <h3>TERRAFORM</h3>
+        <p>Infrastructure as Code Automation</p>
+      </div>
+
+      <div class="card">
+        <h3>MONITORING</h3>
+        <p>Grafana, Prometheus, Loki</p>
+      </div>
+
+      <div class="card">
+        <h3>LINUX</h3>
+        <p>Ubuntu, Bash, NGINX</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>CI/CD PIPELINE</h3>
+        <p>
+          Built automated deployment workflows using Jenkins,
+          Docker, and GitHub Actions.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>KUBERNETES DEPLOYMENT</h3>
+        <p>
+          Deployed scalable microservices infrastructure
+          using Kubernetes clusters.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>AWS TERRAFORM STACK</h3>
+        <p>
+          Provisioned reusable cloud infrastructure
+          using Terraform modules.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCE -->
+
+  <section id="experience">
+
+    <h2>Experience</h2>
+
+    <div class="grid">
+
+      <div class="card">
+
+        <h3>DEVOPS ENGINEER</h3>
+
+        <p><strong>ABC TECH PVT LTD</strong></p>
+
+        <p>2023 - Present</p>
+
+        <ul>
+          <li>Built scalable CI/CD pipelines</li>
+          <li>Reduced deployment time by 60%</li>
+          <li>Managed AWS cloud infrastructure</li>
+          <li>Worked with Kubernetes & Docker</li>
+        </ul>
+
+      </div>
+
+      <div class="card">
+
+        <h3>DEVOPS INTERN</h3>
+
+        <p><strong>XYZ SOLUTIONS</strong></p>
+
+        <p>2022 - 2023</p>
+
+        <ul>
+          <li>Configured Jenkins pipelines</li>
+          <li>Worked with monitoring systems</li>
+          <li>Assisted in Linux server management</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EDUCATION -->
+
+  <section id="education">
+
+    <h2>Education</h2>
+
+    <div class="grid">
+
+      <div class="card">
+
+        <h3>BACHELOR OF COMPUTER SCIENCE</h3>
+
+        <p>XYZ UNIVERSITY</p>
+
+        <p>2019 - 2023</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CERTIFICATIONS -->
+
+  <section id="certifications">
+
+    <h2>Certifications</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>AWS SOLUTIONS ARCHITECT</h3>
+        <p>Amazon Web Services</p>
+      </div>
+
+      <div class="card">
+        <h3>CKA</h3>
+        <p>Certified Kubernetes Administrator</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+
+  <section id="achievements">
+
+    <h2>Achievements</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>60% FASTER DEPLOYMENTS</h3>
+        <p>
+          Improved deployment speed using automated pipelines.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>99.9% UPTIME</h3>
+        <p>
+          Increased reliability through monitoring and alerting systems.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <h2>Contact</h2>
+
+    <div class="card">
+
+      <button onclick="showMessage()">
+        CONTACT ME
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 SANJAY SINGH
+  </footer>
+
+  <!-- JS -->
+
+  <script>
+
+    function showMessage(){
+      alert("You can mail me @ sanjaysinghg2u@gmail.com 🚀");
+    }
+
+  </script>
+
+</body>
+</html>
